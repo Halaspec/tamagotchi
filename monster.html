@@ -1,0 +1,131 @@
+<!--
+	Vie et mort d'un monstre
+	@author       : Étienne André et al.
+	Created       : < 2020
+	Last modified : 2023/02/13
+-->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+      <title>Vie et mort d'un monstre</title>
+      <link rel="stylesheet" href="css/monster.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+   </head>
+
+   <body>
+      <h1>Vie et mort d’un monstre</h1>
+      <div class="page_starter">
+        <div class="loadingConatainer" style="display: flex; text-align: center; justify-content: center; width: 100%; height: 100vh; animation: turnoff 2s forwards;"> 
+          <div class="containerload">
+            <div class="bar1" style="border: white 2px solid; height: 45%;  border-radius:62% 48% 22% 88% / 84% 87% 13% 16% ; width: 30%;   position: absolute; top:25%; left: 35%; "></div>
+            <div class="bar2" style="border: white 2px solid; height: 45%;  border-radius:51% 49% 66% 34% / 55% 29% 71% 45% ;width: 30%;  position: absolute;top:25%; left: 35%;  "></div>
+            <div class="bar3" style="border: white 2px solid; height: 45%;  border-radius: 22% 78% 46% 54% / 55% 48% 52% 45% ; width: 30%;  position: absolute; top:25%; left: 35%; "></div>
+            <nav class="load" style="color:white; position: absolute; top:50%; left: 50%; transform: translateX(-33%);"><strong style="color:black;">Loading<span>.</span><span>.</span><span>.</span></strong></nav>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main">
+      <div class="position">
+
+      <div class="killers">
+         <button id="run">Run</button>
+         <button id="fight">Fight</button>
+         <button id="work">Work</button>
+         <button id="sing">sing</button>
+         </div>
+
+
+         <div id="boitemonster" >
+
+            <ul id="statut">
+               <li>Vie : 0</li>
+               <li>Argent : 0</li>
+               <li>Éveillé</li>
+            </ul>
+
+            <img id="monster" src="" alt="" />
+
+            <div id="actionbox" >
+              <p>Monster life log</p>
+            </div>
+            
+         </div>
+
+         <div class="savers">
+         <button id="sleep">Sleep</button>
+         <button id="eat">Eat</button>
+         <button id="show">Show</button>
+         <button id="douche">douche</button>
+         </div>
+      </div>
+     
+      
+      <hr>
+      <div class="reset">
+      <button id="new">New life</button>
+      <button id="kill">Kill</button>
+      <button id="click">avis</button>
+   </div>
+  </div>
+  <div class="pop" id="status">
+    <div class="container_box" style="overflow: hidden;" id="contain-pop">
+        <ion-icon id="close" name="close-circle" class="ion md hydrated" style=" position: relative ;  left: 95%; cursor: pointer; color: rgb(218, 83, 83, 0.8); transform: scale(110%);" role="img" aria-label="close circle">
+        </ion-icon>
+        <div class="box">
+            <div class="popProfilText">
+                <img src="src/hmz.jpg" alt="" class="pic">
+                <div class="title">
+                    <span class="alias" style=" cursor:default;">Hamza SALAH <br></span>
+                    <span class="job" style="font-size: 14px; cursor:default ;">Web Developper</span>
+                </div>
+            </div>
+                <input type="email" id="mail" name="mail" required="" style="resize: none;width: 80%;background-color: f3f3f3;border-radius: 6px;border: 1px solid #ddd;outline: none; font-size: 14px; margin-bottom:20px; padding-left:40px; height:20px" placeholder="Salah@exemple.com">
+                <input type="text" placeholder="Entrez votre message" name="msg" id="msg" class="textarea" required="">
+                <input type="submit" class="btn" value="Envoyer" id="envoie">
+                <input type="hidden" name="_next" value="https://halaspec.github.io/Web/">
+                <input type="hidden" name="_captcha" value="false">
+            
+        </div>
+    </div>
+</div>
+        <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="eat_audio"  >
+          <source src="src/audio/eat_audio.mp3" type="audio/mpeg">
+        </audio>
+        <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="sleep_audio"  >
+                  <source src="src/audio/sleep_audio.mp3" type="audio/mpeg">
+                </audio>
+
+        <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="fight_audio"  >
+                  <source src="src/audio/fight_audio.mp3" type="audio/mpeg">
+                </audio>
+
+        <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="wash_audio"  >
+                  <source src="src/audio/wash_audio.mp3" type="audio/mpeg">
+                </audio>
+
+        <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="work_audio"  >
+                  <source src="src/audio/work_audio.mp3" type="audio/mpeg">
+                </audio>
+
+        <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="zic1"  >
+                  <source src="src/audio/zic1.mp3" type="audio/mpeg">
+                </audio>
+
+        <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="zic2"  >
+                  <source src="src/audio/zic2.mp3" type="audio/mpeg">
+                </audio>
+         <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="run_audio"  >
+                  <source src="src/audio/run_audio.mp3" type="audio/mpeg">
+                </audio>
+         <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="gameover"  >
+                  <source src="src/audio/gameover.mp3" type="audio/mpeg">
+                </audio>
+         <audio controls style="opacity:0.5; position:absolute; top:0px; left:0px; display:none;" id="hello"  >
+                  <source src="src/audio/hello.mp3" type="audio/mpeg">
+                </audio>
+      <script src="js/monster.js"></script>
+   </body>
+</html>
