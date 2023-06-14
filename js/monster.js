@@ -26,7 +26,7 @@ let gameover = document.getElementById("gameover");
 let hello = document.getElementById("hello"); 
 let hire_Btn = document.getElementById("click");
  let closeBtn = document.getElementById("close");
- let pop = document.getElementById("status");
+ let pop = document.getElementById("pop_status");
  let containpop = document.getElementById("contain-pop");
  let sendBtn = document.getElementById("envoie");
  let msgPut = document.getElementById("msg");
@@ -65,8 +65,8 @@ function logBoite(message) {
 
 // Afichage des actuelle stats du mointre
 function updateStatus() {
-    updateColor(life);
-    updateBorder();
+    //updateColor(life);
+    //updateBorder();
     actoinBoite_liElements[0].textContent = "Vie : " + life;
     actoinBoite_liElements[1].textContent = "Argent : " + money;
     actoinBoite_liElements[2].textContent = str_awake;
@@ -315,16 +315,16 @@ hire_Btn.addEventListener("click", () => {
   mailPut.addEventListener("input", () => {
     if (msgPut.value != null && mailPut.value != null){ sendBtn.disabled = false; } else {sendBtn.disabled = true; }
   
-  })
+  });
   
   
   msgPut.addEventListener("input", () => {
     if (msgPut.value != null && mailPut.value != null) { sendBtn.disabled = false; } else {sendBtn.disabled = true; }
-  })
+  });
   
   sendBtn.disabled = true;
   sendBtn.addEventListener("click", () => {
     alert("Envoie avec succées");
     pop.classList.remove("pop_show");
   }
-  )
+  );

@@ -60,6 +60,9 @@ ul#statut li {
 body {
   background-image: url(./im.jpg);
   background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .position {
   display: flex;
@@ -241,10 +244,12 @@ bottom: 0px;  }
 .main{
     animation: show_main  10s forwards;
     position: absolute;
-top: 25%;
-left: 25%;
 }
 
+h1{
+  position: absolute;
+  top: 2%;
+}
 
 @keyframes show_main {
     0%{
